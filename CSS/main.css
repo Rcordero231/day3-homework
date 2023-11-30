@@ -52,6 +52,16 @@ body {
     grid-area: tickets; 
 }
 
+.image2 {
+    grid-area: image2;
+}
+
+.image2-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .info-container {
 
 }
