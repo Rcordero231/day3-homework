@@ -3,6 +3,10 @@ body {
     color: white;
 }
 
+.area-border {
+    border: 2px solid pink;
+}
+
 .container {  display: grid;
     grid-template-columns: 22% 1fr 1.1fr 22%;
     grid-template-rows: 10% 32.9% 1.1fr;
@@ -10,28 +14,45 @@ body {
     gap: 3% 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "nav nav nav nav"
-      "Image Image Image Image"
-      ". Tickets Tickets .";
+        "header . nav ."
+        "image1 image1 image1 image1"
+        ". image2 tickets .";
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
 }
 
 .nav {
     grid-area: nav; 
 }
 
-.navbar {
+.navlinks {
+    height: 70%;
     display: flex;
-    align-items: first baseline;
-    flex-direction: row;
-    justify-content: space-between;
-    position: sticky;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.Image { 
-    grid-area: Image; 
+    .image1 { 
+    grid-area: image1;
+    align-self: center;
+    margin: auto; 
 }
 
-.Tickets { grid-area: Tickets; 
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.tickets { 
+    grid-area: tickets; 
+}
+
+.info-container {
+
+}
 
